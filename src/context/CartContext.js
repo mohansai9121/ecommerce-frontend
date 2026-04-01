@@ -21,7 +21,7 @@ export const CartProvider = ({ children }) => {
         items: cart,
       });
     }
-  }, [cart]);
+  }, [user, cart]);
 
   useEffect(() => {
     const fetchCart = async () => {

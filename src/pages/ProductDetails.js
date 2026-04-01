@@ -5,6 +5,7 @@ import { useCart } from "../context/CartContext";
 import { Button, Panel, Loader } from "rsuite";
 import { motion } from "framer-motion";
 import "./ProductDetails.css";
+import { useCallback } from "react";
 
 const ProductDetails = () => {
   const { addToCart } = useCart();
@@ -13,20 +14,14 @@ const ProductDetails = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const fetchProduct = async () => {
-    try {
-      const res = await API.get(`/products/${id}`);
-      setProduct(res.data);
-    } catch (err) {
-      console.log(err);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const fetchProduct = useCallback(async () => {
+    const res = await API.get(`/products/${id}`);
+    setProduct(res.data);
+  }, [id]);
 
   useEffect(() => {
     fetchProduct();
-  }, [id]);
+  }, [fetchProduct]);
 
   if (loading) {
     return (

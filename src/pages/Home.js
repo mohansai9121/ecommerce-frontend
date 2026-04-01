@@ -5,6 +5,7 @@ import { useAuth } from "../context/AuthContext";
 import { Input, SelectPicker, Button, Panel } from "rsuite";
 import { motion } from "framer-motion";
 import "./Home.css";
+import { useCallback } from "react";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -27,14 +28,14 @@ const Home = () => {
     maxPrice: "",
   });
 
-  const fetchProducts = async () => {
+  const fetchProducts = useCallback(async () => {
     const res = await getProducts(filters);
     setProducts(res.data);
-  };
+  }, [filters]);
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [fetchProducts]);
 
   return (
     <div className="home-container">
