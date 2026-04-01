@@ -1,0 +1,44 @@
+/* FULL PAGE */
+.register-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+/* BOX */
+.register-box {
+  width: 370px;
+}
+
+/* TITLE */
+.register-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* FORM */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* FOOTER */
+.register-footer {
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* LINK */
+.register-footer a {
+  color: #3498ff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.register-footer a:hover {
+  text-decoration: underline;
+}

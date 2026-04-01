@@ -1,0 +1,44 @@
+/* FULL PAGE CENTERING */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* LOGIN BOX */
+.login-box {
+  width: 350px;
+}
+
+/* TITLE */
+.login-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* FORM */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* FOOTER */
+.login-footer {
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* LINK */
+.login-footer a {
+  color: #3498ff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}

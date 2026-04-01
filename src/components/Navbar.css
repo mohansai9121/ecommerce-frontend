@@ -1,0 +1,28 @@
+/* NAVBAR */
+.nav-container {
+  padding: 10px 20px;
+  background: #1e293b !important;
+  color: white;
+}
+
+/* BRAND */
+.rs-navbar-brand {
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff !important;
+}
+
+/* NAV ITEMS */
+.nav-container a {
+  color: #e2e8f0 !important;
+  font-weight: 500;
+}
+
+.nav-container a:hover {
+  color: red !important;
+}
+
+/* CART BADGE */
+.cart-badge {
+  margin-left: 5px;
+}
